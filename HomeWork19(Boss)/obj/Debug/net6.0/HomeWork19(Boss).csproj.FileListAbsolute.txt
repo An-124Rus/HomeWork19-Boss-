@@ -1,0 +1,15 @@
+D:\Projects CS\HomeWork19(Boss)\HomeWork19(Boss)\bin\Debug\net6.0\HomeWork19(Boss).exe
+D:\Projects CS\HomeWork19(Boss)\HomeWork19(Boss)\bin\Debug\net6.0\HomeWork19(Boss).deps.json
+D:\Projects CS\HomeWork19(Boss)\HomeWork19(Boss)\bin\Debug\net6.0\HomeWork19(Boss).runtimeconfig.json
+D:\Projects CS\HomeWork19(Boss)\HomeWork19(Boss)\bin\Debug\net6.0\HomeWork19(Boss).dll
+D:\Projects CS\HomeWork19(Boss)\HomeWork19(Boss)\bin\Debug\net6.0\HomeWork19(Boss).pdb
+D:\Projects CS\HomeWork19(Boss)\HomeWork19(Boss)\obj\Debug\net6.0\HomeWork19(Boss).csproj.AssemblyReference.cache
+D:\Projects CS\HomeWork19(Boss)\HomeWork19(Boss)\obj\Debug\net6.0\HomeWork19(Boss).GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects CS\HomeWork19(Boss)\HomeWork19(Boss)\obj\Debug\net6.0\HomeWork19(Boss).AssemblyInfoInputs.cache
+D:\Projects CS\HomeWork19(Boss)\HomeWork19(Boss)\obj\Debug\net6.0\HomeWork19(Boss).AssemblyInfo.cs
+D:\Projects CS\HomeWork19(Boss)\HomeWork19(Boss)\obj\Debug\net6.0\HomeWork19(Boss).csproj.CoreCompileInputs.cache
+D:\Projects CS\HomeWork19(Boss)\HomeWork19(Boss)\obj\Debug\net6.0\HomeWork19(Boss).dll
+D:\Projects CS\HomeWork19(Boss)\HomeWork19(Boss)\obj\Debug\net6.0\refint\HomeWork19(Boss).dll
+D:\Projects CS\HomeWork19(Boss)\HomeWork19(Boss)\obj\Debug\net6.0\HomeWork19(Boss).pdb
+D:\Projects CS\HomeWork19(Boss)\HomeWork19(Boss)\obj\Debug\net6.0\HomeWork19(Boss).genruntimeconfig.cache
+D:\Projects CS\HomeWork19(Boss)\HomeWork19(Boss)\obj\Debug\net6.0\ref\HomeWork19(Boss).dll

@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "HomeWork19(Boss)/1.0.0": {
+        "runtime": {
+          "HomeWork19(Boss).dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "HomeWork19(Boss)/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
