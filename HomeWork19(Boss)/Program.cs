@@ -2,10 +2,10 @@
 {
     private static void Main(string[] args)
     {
-        const string ActivationOfMagicOne = "1";
-        const string ActivationOfMagicTwo = "2";
-        const string ActivationOfMagicThree = "3";
-        const string ActivationOfMagicFour = "4";
+        const string ActivationOfFirstMagic = "1";
+        const string ActivationOfSecondMagic = "2";
+        const string ActivationOfThirdMagic = "3";
+        const string ActivationOfFourthMagic = "4";
 
         Console.WriteLine(" ФИНАЛЬНАЯ БИТВА ");
 
@@ -28,15 +28,15 @@
         string fire = "ОГОНЬ";
         string heal = "ЗАМЕЩЕНИЕ";
         string golem = "ГОЛЕМ";
-        string invisible = "НЕВИДИМОСТЬ";        
+        string invisible = "НЕВИДИМОСТЬ";
         int attemptOfFireAttack = 3;
-        int numberOfFireAttack = 3;
+        int countOfFireAttack = 3;
         int minAttemptOfFireAttack = 0;
         int attemptOfHeal = 3;
         int minAttemptOfHeal = 0;
         int attemptOfGolemAttack = 3;
         int minAttemptOfGolemAttack = 0;
-        int numberOfGolemAttack = 3;
+        int countOfGolemAttack = 3;
         int attemptOfInvisible = 3;
         int minAttemptOfInvisible = 0;
 
@@ -45,10 +45,10 @@
         Console.WriteLine("\nМаг! Добро пожаловать на финальную битву c БОССом.");
         Console.WriteLine($"\nВаша жизнь равна {heroHealth}, БОССа {bossHealth}." +
             $"\n\nДоступные заклинания:" +
-            $"\n\n{fire} - Яркий адский огонь, превращает врагов в пепел. Наносит подряд {numberOfFireAttack} удара.                          - нажми {ActivationOfMagicOne}" +
-            $"\n{heal} - Восстанавливается часть ХР мага за часть здоровья БОССа. Урона от БОССа нет.                - нажми {ActivationOfMagicTwo}" +
-            $"\n{golem} - Призывает Голема. {golem} наносит {numberOfGolemAttack} раза небольшой урон, но при этом теряется часть ХР героя.     - нажми {ActivationOfMagicThree}" +
-            $"\n{invisible} - Урон от БОССа не проходит, восполняет герою ХР. Активирует заклинание {fire}.              - нажми {ActivationOfMagicFour}" +
+            $"\n\n{fire} - Яркий адский огонь, превращает врагов в пепел. Наносит подряд {countOfFireAttack} удара.                          - нажми {ActivationOfFirstMagic}" +
+            $"\n{heal} - Восстанавливается часть ХР мага за часть здоровья БОССа. Урона от БОССа нет.                - нажми {ActivationOfSecondMagic}" +
+            $"\n{golem} - Призывает Голема. {golem} наносит {countOfGolemAttack} раза небольшой урон, но при этом теряется часть ХР героя.     - нажми {ActivationOfThirdMagic}" +
+            $"\n{invisible} - Урон от БОССа не проходит, восполняет герою ХР. Активирует заклинание {fire}.              - нажми {ActivationOfFourthMagic}" +
             $"\n\nВАЖНО!!! Все заклинания можно использовать только {attemptOfHeal} раза. Если {invisible} израсходована, {fire} не доступен.");
         Console.WriteLine("\n!!!Да начнётся битва!!!");
 
@@ -66,32 +66,32 @@
 
             switch (userInput)
             {
-                case ActivationOfMagicOne:
-                        if (attemptOfInvisible == attemptOfFireAttack)
+                case ActivationOfFirstMagic:
+                    if (attemptOfInvisible == attemptOfFireAttack)
+                    {
+                        Console.WriteLine("Нужна активация заклинания.");
+                        heroHealth -= bossAddDamage;
+                    }
+                    else
+                    {
+                        if (attemptOfFireAttack == minAttemptOfFireAttack)
                         {
-                            Console.WriteLine("Нужна активация заклинания.");
+                            Console.WriteLine("Заклинание невозможно использовать.");
                             heroHealth -= bossAddDamage;
+                            attemptOfFireAttack = 0;
                         }
                         else
                         {
-                            if (attemptOfFireAttack == minAttemptOfFireAttack)
-                            {
-                                Console.WriteLine("Заклинание невозможно использовать.");
-                                heroHealth -= bossAddDamage;
-                                attemptOfFireAttack = 0;
-                            }
-                            else
-                            {
-                                attemptOfFireAttack--;
-                                heroDamage *= numberOfFireAttack;
-                                bossHealth -= heroDamage;
-                                bossDamage += bossAddDamage;
-                                heroHealth -= bossDamage;
-                            }
+                            attemptOfFireAttack--;
+                            heroDamage *= countOfFireAttack;
+                            bossHealth -= heroDamage;
+                            bossDamage += bossAddDamage;
+                            heroHealth -= bossDamage;
                         }
-                        break;
+                    }
+                    break;
 
-                case ActivationOfMagicTwo:
+                case ActivationOfSecondMagic:
                     attemptOfHeal--;
 
                     if (attemptOfHeal >= minAttemptOfHeal)
@@ -118,12 +118,12 @@
                     }
                     break;
 
-                case ActivationOfMagicThree:
+                case ActivationOfThirdMagic:
                     attemptOfGolemAttack--;
 
                     if (attemptOfGolemAttack >= minAttemptOfGolemAttack)
                     {
-                        heroDamage = golemDamage * numberOfGolemAttack;
+                        heroDamage = golemDamage * countOfGolemAttack;
                         bossHealth -= heroDamage;
                         heroHealth -= bossDamage;
                     }
@@ -135,7 +135,7 @@
                     }
                     break;
 
-                case ActivationOfMagicFour:
+                case ActivationOfFourthMagic:
                     attemptOfInvisible--;
 
                     if (attemptOfInvisible >= minAttemptOfInvisible)
@@ -164,17 +164,17 @@
             }
             Console.WriteLine($"\nУ героя осталось {heroHealth} здоровья, у БОССа осталось {bossHealth} здоровья.");
             Console.WriteLine($"\nНажми: | Осталось заклинаний: |" +
-                $"\n  {ActivationOfMagicOne}    | {fire}            - {attemptOfFireAttack} |" +
-                $"\n  {ActivationOfMagicTwo}    | {heal}        - {attemptOfHeal} |" +
-                $"\n  {ActivationOfMagicThree}    | {golem}            - {attemptOfGolemAttack} |" +
-                $"\n  {ActivationOfMagicFour}    | {invisible}      - {attemptOfInvisible} |");            
+                $"\n  {ActivationOfFirstMagic}    | {fire}            - {attemptOfFireAttack} |" +
+                $"\n  {ActivationOfSecondMagic}    | {heal}        - {attemptOfHeal} |" +
+                $"\n  {ActivationOfThirdMagic}    | {golem}            - {attemptOfGolemAttack} |" +
+                $"\n  {ActivationOfFourthMagic}    | {invisible}      - {attemptOfInvisible} |");
         }
         if (heroHealth <= 0 && bossHealth <= 0)
             Console.WriteLine("\nНичья. Только кому от этого легче...");
 
         if (heroHealth <= 0)
             Console.WriteLine("\nСожалеем! Герой пал.");
-        else        
+        else
             Console.WriteLine("\nПоздравляем! БОСС пал.");
     }
 }
