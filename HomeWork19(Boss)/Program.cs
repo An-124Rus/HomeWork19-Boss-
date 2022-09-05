@@ -67,27 +67,25 @@
             switch (userInput)
             {
                 case ActivationOfFirstMagic:
+
                     if (attemptOfInvisible == attemptOfFireAttack)
                     {
                         Console.WriteLine("Нужна активация заклинания.");
                         heroHealth -= bossAddDamage;
                     }
+                    else if (attemptOfFireAttack == minAttemptOfFireAttack)
+                    {
+                        Console.WriteLine("Заклинание невозможно использовать.");
+                        heroHealth -= bossAddDamage;
+                        attemptOfFireAttack = 0;
+                    }
                     else
                     {
-                        if (attemptOfFireAttack == minAttemptOfFireAttack)
-                        {
-                            Console.WriteLine("Заклинание невозможно использовать.");
-                            heroHealth -= bossAddDamage;
-                            attemptOfFireAttack = 0;
-                        }
-                        else
-                        {
-                            attemptOfFireAttack--;
-                            heroDamage *= countOfFireAttack;
-                            bossHealth -= heroDamage;
-                            bossDamage += bossAddDamage;
-                            heroHealth -= bossDamage;
-                        }
+                        attemptOfFireAttack--;
+                        heroDamage *= countOfFireAttack;
+                        bossHealth -= heroDamage;
+                        bossDamage += bossAddDamage;
+                        heroHealth -= bossDamage;
                     }
                     break;
 
